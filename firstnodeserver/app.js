@@ -1,11 +1,13 @@
 var http = require('http');
 
 
+var app = http.createServer(function(request, response){
+  console.log(request.url);
 
-http.createServer(function(request, response){
-  response.writeHead(200, {'Content-Type': 'text/plain'});
-  response.write("Hello World!");
-  response.end();
+  if(request.url === "/"){
+    response.write("This is HOME.");
+    response.end();
+  }
 }).listen(process.env.PORT || 3030);
 
 console.log("First Node Server is running at localhost");
