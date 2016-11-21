@@ -28,7 +28,7 @@ function fastcampus(request, response) {
   }
 }
 
-function detail(request, response) {
+// function detail(request, response) {
   // var detailId = request.url.replace("/", "");
   //
   // if(detailId.length > 0) {
@@ -37,9 +37,9 @@ function detail(request, response) {
   //     response.end();
   //   });
   // }
-}
+// }
 
 module.exports.home = home;
 module.exports.about = about;
 module.exports.fastcampus = fastcampus;
-module.exports.detail = detail;
+// module.exports.detail = detail;
