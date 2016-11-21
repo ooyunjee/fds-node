@@ -1,13 +1,16 @@
 var http = require('http');
 
+var router = require('./router');
+
 
 var app = http.createServer(function(request, response){
   console.log(request.url);
 
-  if(request.url === "/"){
-    response.write("This is HOME.");
-    response.end();
-  }
+  router.home(request, response);
+  router.about(request, response);
+  router.fastcampus(request, response);
+  // router.detail(request, response);
+
 }).listen(process.env.PORT || 3030);
 
 console.log("First Node Server is running at localhost");
