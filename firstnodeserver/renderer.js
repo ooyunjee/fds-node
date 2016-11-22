@@ -1,6 +1,6 @@
 var fs = require('fs');
 
-moduls.exports = function(request, response, layoutName) {
+module.exports = function(request, response, layoutName) {
   var baseResource = fs.readFileSync('./layout/layout.html', 'utf8');
   var headerResource = fs.readFileSync('./layout/partials/header.html', 'utf8');
   var footerResource = fs.readFileSync('./layout/partials/footer.html', 'utf8');
